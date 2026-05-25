@@ -1,0 +1,41 @@
+---
+links:
+###Workspace Start###
+# list of link parameters starting from the first link i=1 (p=0)
+# angles can be entered using "pi" or "deg" as variables, Modified DH parameters are used, i.e. sequence: R(alpha_p) T(a_p) T(d_i) R(theta_i)
+  - alpha_p: 0 deg      # Link 1: J1 rotates about vertical z
+    a_p: 0
+    d_i: 0              # base height (from course manual)
+  - alpha_p: 90 deg    # Link 2: twist z to horizontal for J2
+    a_p: 0
+    d_i: 0
+  - alpha_p: 0 deg      # Link 3: upper arm length
+    a_p: 0.444
+    d_i: 0
+  - alpha_p: 90 deg    # Link 4
+    a_p: 0.110
+    d_i: 0.470    
+  - alpha_p: -90 deg     # Link 5
+    a_p: 0
+    d_i: 0
+  - alpha_p: 90 deg      # Link 6
+    a_p: 0.080
+    d_i: 0
+###Workspace End###
+
+
+
+##Workspace Start###
+# position of the TCP represented in the coordinate system of the last link in meter
+r_NTCP__N: [0, 0, 0]
+###Workspace End###
+
+# home position of the robot in joint space
+q_home: [0.0, -90 deg, 0.0, 0.0, 0.0, 0.0]
+
+# maximum and minimum joint angles
+q_max: [180.0 deg, 180.0 deg, 85.0 deg, 180.0 deg, 180.0 deg, 270.0 deg]
+q_min: [-180.0 deg, -180.0 deg, -225.0 deg, -180.0 deg, -180.0 deg, -270.0 deg]
+
+# comfort pose in joint space
+q_comfort: [0.0, -90.0 deg, 0.0, 0.0, 30.0 deg, 0.0]

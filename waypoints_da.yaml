@@ -1,0 +1,153 @@
+# TCP waypoints for writing 大 on paper (base xoy plane)
+# Units: meter, frame 0
+# Format: each row is [x, y, z]; pen-up rows have z = z_pen_up
+task: write character 大 on paper in base xoy plane
+paper:
+  plane: xoy
+  z: 0.05
+  z_pen_up: 0.08
+  note: 纸面位于基座坐标系 xoy 平面，z 为纸面高度 [m]
+character:
+  glyph: 大
+  center:
+  - 0.4
+  - 0.0
+  size_m:
+  - 0.09
+  - 0.07
+  stroke_order:
+  - 横
+  - 撇
+  - 捺
+strokes:
+- id: 1
+  name: 横
+  pen: down
+  points:
+  - &id001
+    - 0.355
+    - 0.0193
+    - 0.05
+  - &id002
+    - 0.373
+    - 0.0193
+    - 0.05
+  - &id003
+    - 0.391
+    - 0.0193
+    - 0.05
+  - &id004
+    - 0.409
+    - 0.0193
+    - 0.05
+  - &id005
+    - 0.427
+    - 0.0193
+    - 0.05
+  - &id006
+    - 0.445
+    - 0.0193
+    - 0.05
+- id: 2
+  name: pen_up_to_撇
+  pen: up
+  points:
+  - &id007
+    - 0.3978
+    - 0.014
+    - 0.08
+  - &id008
+    - 0.3978
+    - 0.014
+    - 0.05
+- id: 3
+  name: 撇
+  pen: down
+  points:
+  - &id009
+    - 0.3978
+    - 0.014
+    - 0.05
+  - &id010
+    - 0.3899
+    - 0.0042
+    - 0.05
+  - &id011
+    - 0.3821
+    - -0.0056
+    - 0.05
+  - &id012
+    - 0.3743
+    - -0.0154
+    - 0.05
+  - &id013
+    - 0.3664
+    - -0.0252
+    - 0.05
+  - &id014
+    - 0.3586
+    - -0.035
+    - 0.05
+- id: 4
+  name: pen_up_to_捺
+  pen: up
+  points:
+  - &id015
+    - 0.4022
+    - 0.014
+    - 0.08
+  - &id016
+    - 0.4022
+    - 0.014
+    - 0.05
+- id: 5
+  name: 捺
+  pen: down
+  points:
+  - &id017
+    - 0.4022
+    - 0.014
+    - 0.05
+  - &id018
+    - 0.4101
+    - 0.0042
+    - 0.05
+  - &id019
+    - 0.4179
+    - -0.0056
+    - 0.05
+  - &id020
+    - 0.4257
+    - -0.0154
+    - 0.05
+  - &id021
+    - 0.4336
+    - -0.0252
+    - 0.05
+  - &id022
+    - 0.4414
+    - -0.035
+    - 0.05
+waypoints:
+- *id001
+- *id002
+- *id003
+- *id004
+- *id005
+- *id006
+- *id007
+- *id008
+- *id009
+- *id010
+- *id011
+- *id012
+- *id013
+- *id014
+- *id015
+- *id016
+- *id017
+- *id018
+- *id019
+- *id020
+- *id021
+- *id022
